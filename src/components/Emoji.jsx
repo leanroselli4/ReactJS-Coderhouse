@@ -1,0 +1,1 @@
+export const Emoji = () => <div style={{ fontSize: "5rem" }}>🍑</div>
