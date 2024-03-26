@@ -44,18 +44,6 @@
     border-radius: 16px;
 }
 
-.locals {
-    border-radius: 12px;
-}
-
-.locals-bg-custom {
-    background-color: rgb(236, 219, 197);
-}
-
-.locals-margin-custom {
-    margin-inline: 9vw;
-}
-
 .news-custom {
     width: 352px;
     border-radius: 16px;
