@@ -1,11 +1,12 @@
-import { NavBar } from "./components/NavBar";
-import { ItemListContainer } from "./components/ItemListContainer";
+import PreEntrega2 from "./PreEntrega2/PreEntrega2";
+import './PreEntrega2/style.css'
 
-
-function App() {
-  return <><NavBar />
-  <ItemListContainer greetings="hi" />
-  </>
+const App = () => {
+  return (
+    <div>
+      <PreEntrega2 />
+    </div>
+  );
 }
 
 export default App;
