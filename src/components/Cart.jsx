@@ -7,7 +7,7 @@ import trash2 from "../assets/icons/trash2.svg";
 const Cart = () => {
     const {cart, removeItem, clear, CantTotalProductos, SumaTotalProductos} = useContext(CartContext);
 
-    if (CantTotalProductos() == 0) {
+    if (CantTotalProductos() === 0) {
         return (
 
             <div className="container-fluid bg-white">
@@ -24,7 +24,7 @@ const Cart = () => {
     return (
         <div className="container-fluid bg-dark d-flex flex-column align-items-center">
             <div className="row">
-                <div className="col bg-dark text-light text-center font-gigames px-5 py-3">
+                <div className="col bg-dark text-light text-center font-bk px-5 py-3">
                     <h2 className="fs-1 m-0">CARRITO DE COMPRAS</h2>
                 </div>
             </div>
@@ -58,7 +58,7 @@ const Cart = () => {
                             )}
                             <tr>
                                 <td colSpan={4} className="align-middle bg-dark text-light"></td>
-                                <td className="bg-dark text-light font-platform fw-bold fs-5 m-0 py-3">${SumaTotalProductos().toFixed(2)}</td>
+                                <td className="bg-dark text-light font-category fw-bold fs-5 m-0 py-3">${SumaTotalProductos().toFixed(2)}</td>
                                 <td className="align-middle bg-dark text-center px-0">
                                     <Link to={"/checkout"} className="btn btn-light">Confirmar Compra</Link>
                                 </td>

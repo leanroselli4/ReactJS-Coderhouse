@@ -25,7 +25,7 @@ const Checkout = () => {
         setLoading(false);
 
         const buyer = {name:nombre, email:email, phone:telefono};
-        const items = cart.map(item => ({id:item.idx, title:item.title, price:item.price, quantity:item.quantity}));
+        const items = cart.map(item => ({id:item.id, title:item.title, price:item.price, quantity:item.quantity}));
         const fecha = new Date();
         const date = `${fecha.getDate()}-${fecha.getMonth()+1}-${fecha.getFullYear()} ${fecha.getHours()}:${fecha.getMinutes()}`;
         const total = SumaTotalProductos().toFixed(2);
@@ -39,6 +39,7 @@ const Checkout = () => {
         });
 
         window.scrollTo({top: 0, behavior: 'smooth'});
+
     }
 
     return (
@@ -78,30 +79,29 @@ const Checkout = () => {
                             <form>
                                 <div className="mb-3">
                                     <label className="form-label">Nombre</label>
-                                    <input type="text" placeholder="" className="form-control" onInput={(e) => {setNombre(e.target.value)}} />
+                                    <input type="text" placeholder="Name" className="form-control" onInput={(e) => {setNombre(e.target.value)}} />
                                 </div>
                                 <div className="mb-3">
                                     <label className="form-label">Email</label>
-                                    <input type="email" placeholder="" className="form-control" onInput={(e) => {setEmail(e.target.value)}} />
+                                    <input type="email" placeholder="Email" className="form-control" onInput={(e) => {setEmail(e.target.value)}} />
                                 </div>
                                 <div className="mb-3">
                                     <label className="form-label">Teléfono</label>
-                                    <input type="number" placeholder="" className="form-control" onInput={(e) => {setTelefono(e.target.value)}} />
+                                    <input type="number" placeholder="Phone" className="form-control" onInput={(e) => {setTelefono(e.target.value)}} />
                                 </div>
                                 {loading ?
                                     <button type="button" className="btn btn-light mt-5 mb-3" onClick={generarOrden}>Generar Orden</button>
-                                    : <Loading />
+                                    : <Loading/>
                                 }
                             </form>
                         </div>
                     </div>
                 </div>
             }
-            
             <div className="row">
                 {orderId ? 
                     <div className="bg-light text-dark text-center py-5 my-5">
-                        <h2 className="fs-1 m-0">¡Gracias por comprar en <span className="font-gigames">Burger King Fake</span>!</h2>
+                        <h2 className="fs-1 m-0">¡Gracias por comprar en <span>Burger Fake King</span>!</h2>
                         <p className="fs-5 m-2">Tu ID de Compra es: <b>{orderId}</b></p>
                     </div>
                     : ""}

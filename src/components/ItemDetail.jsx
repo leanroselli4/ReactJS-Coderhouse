@@ -17,13 +17,13 @@ const ItemDetail = ({item}) => {
                 </div>
 
                 <div className="col-md-7 d-flex flex-column justify-content-center">
-                    <div className="row text-light font-gigames">
+                    <div className="row text-light font-bk">
                         <h2 className="title-size m-0">{item.title}</h2>
                     </div>
-                    <div className="row text-light font-platform pt-1">
-                        <h2 className="platform-size m-0">{item.category.toUpperCase()}</h2>
+                    <div className="row text-light font-category pt-1">
+                        <h2 className="category-size m-0">{item.category.toUpperCase()}</h2>
                     </div>
-                    <div className="row text-light font-platform fs-3 pt-3">
+                    <div className="row text-light font-category fs-3 pt-3">
                         <p className="price-size m-0"><b>$ {item.price}</b></p>
                     </div>
                     <div className="row text-light font-text text-justify pt-5 pb-2">

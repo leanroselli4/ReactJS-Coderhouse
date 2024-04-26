@@ -1,4 +1,3 @@
-// usé 'npm install react-responsive' para instalarlo y usarlo con este componente
 import { NavLink } from "react-router-dom";
 import MediaQuery from 'react-responsive';
 import CartWidget from "./CartWidget";
